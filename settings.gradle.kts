@@ -3,4 +3,4 @@ plugins {
 }
 
 rootProject.name="mn-test-resource-modules"
-include("application")
+include("application", "test-resources")

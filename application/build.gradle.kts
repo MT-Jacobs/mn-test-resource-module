@@ -4,7 +4,7 @@ plugins {
     id("com.google.devtools.ksp")
     id("com.github.johnrengelman.shadow")
     id("io.micronaut.application")
-    id("io.micronaut.test-resources")
+    id("io.micronaut.test-resources-consumer")
     id("io.micronaut.aot")
 }
 
@@ -30,6 +30,7 @@ dependencies {
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
     runtimeOnly("org.yaml:snakeyaml")
     testImplementation("io.micronaut:micronaut-http-client")
+    testResourcesService(project(":test-resources"))
 }
 
 

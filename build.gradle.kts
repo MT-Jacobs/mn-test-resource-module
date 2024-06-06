@@ -5,5 +5,6 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1" apply false
     id("io.micronaut.application") version "4.4.0" apply false
     id("io.micronaut.test-resources") version "4.4.0" apply false
+    id("io.micronaut.test-resources-consumer") version "4.4.0" apply false
     id("io.micronaut.aot") version "4.4.0" apply false
 }

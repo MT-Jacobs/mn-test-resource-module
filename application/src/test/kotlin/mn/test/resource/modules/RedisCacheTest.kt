@@ -16,14 +16,14 @@ import java.util.concurrent.atomic.AtomicInteger
 open class RedisCacheTest(
     private val oneTimeCacheTestClient: OneTimeCacheTestClient,
 ) : ShouldSpec({
-        should("respect the cache") {
-            val result = oneTimeCacheTestClient.getString("THIS")
-            // This should skip the counter-based response.
-            val result2 = oneTimeCacheTestClient.getString("THIS")
-            result.shouldBeInstanceOf<GeneralDTO.Success<String>>()
-            result2.shouldBeInstanceOf<GeneralDTO.Success<String>>()
-        }
-    }) {
+    should("respect the cache") {
+        val result = oneTimeCacheTestClient.getString("THIS")
+        // This should skip the counter-based response.
+        val result2 = oneTimeCacheTestClient.getString("THIS")
+        result.shouldBeInstanceOf<GeneralDTO.Success<String>>()
+        result2.shouldBeInstanceOf<GeneralDTO.Success<String>>()
+    }
+}) {
     @Requires(property = "spec.name", value = "RedisCacheTest")
     @Singleton
     @CacheConfig
